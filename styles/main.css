@@ -23,6 +23,25 @@
     color: #003459;
 }
 
+/* Navbar Styling */
+
+#main-nav {
+    margin-top: 15px;
+}
+
+#main-nav ul li a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+    padding: 10px;
+}
+
+#main-nav ul li a:hover {
+    background: #fff;
+    color: #003459;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -32,6 +51,8 @@ ul {
 li {
     display: inline;
   }
+
+
 
 .totalText{
     color: white;
@@ -43,6 +64,13 @@ li {
 .iconNumber {
     width: 3.5vw;
     height: 3.5vw;
+}
+
+/* Footer */
+footer {
+    margin-top: 100px;
+    text-align: center;
+
 }
 
 
