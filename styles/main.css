@@ -1,0 +1,58 @@
+
+/*CSS Geral*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headerText {
+    font-family: 'Montserrat', sans-serif;
+    margin: 2vw 0 0 2vw;
+    padding: 0;
+}
+
+#wrap {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #00a7e1;
+}
+
+.totalNumber {
+    font-size: 13vw;
+    color: #003459;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+li {
+    display: inline;
+  }
+
+.totalText{
+    color: white;
+    font-size: 5vw;
+    margin: 0 0 0 2vw;
+    padding: 0;
+}
+
+.iconNumber {
+    width: 3.5vw;
+    height: 3.5vw;
+}
+
+
+/*Rezising do texto para Deskop*/
+@media only screen and (min-width: 992px) {
+
+.totalText{
+    font-size: 2vw;
+}
+.totalNumber {
+    font-size: 5vw;
+}
+}
