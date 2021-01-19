@@ -27,6 +27,7 @@ const estadosBrasil = [
     { "nome": "Sergipe", "sigla": "SE" },
     { "nome": "Tocantins", "sigla": "TO" }
 ];
+
 const baseUrl = 'https://covid19-brazil-api.now.sh/api/report/v1/brazil';
 getBrazilStats();
 
@@ -68,7 +69,5 @@ function getStatsPerState(sigla) {
             const responseJson = data.data;
             console.log(data);
         });
-
 }
-
 
