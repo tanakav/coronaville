@@ -49,14 +49,15 @@ function getBrazilStats() {
             if (Object.keys(responseJson).length > 0) {
                 console.log(responseJson);
                 document.getElementById('totalBrasilConfirmed').innerHTML = responseJson.confirmed.toLocaleString('pt-BR');
+                document.getElementById('totalBrasilDeaths').innerHTML = responseJson.deaths.toLocaleString('pt-BR');
             } else {
                 document.getElementById('totalBrasilConfirmed').innerHTML = 0;
             }
         });
 }
 
-function getStatsPerState(sigla) {
-    fetch(baseUrl + '/uf/' + sigla)
+async function getStatsPerState(sigla) {
+    const stateData = await fetch(baseUrl + '/uf/' + sigla)
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -66,9 +67,20 @@ function getStatsPerState(sigla) {
         })
         .catch(error => {
             console.error(error);
-        })
-        .then(data => {
-            console.log(data);
         });
+
+    return stateData;
 }
+
+let statesParagraph = document.querySelectorAll('.stateText');
+
+statesParagraph.forEach((element) => {
+    getStatsPerState(element.dataset.sigla)
+        .then(data => {
+            var stateData;
+            stateData = estadosBrasil.find(state => state.sigla === data.uf).nome;
+            stateData += ': ' + data.cases.toLocaleString('pt-BR');
+            element.innerHTML = stateData;
+        });
+});
 
