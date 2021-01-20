@@ -30,6 +30,7 @@ const estadosBrasil = [
 
 const baseUrl = 'https://covid19-brazil-api.now.sh/api/report/v1/brazil';
 getBrazilStats();
+getStatsPerState('sp');
 
 function getBrazilStats() {
     fetch(baseUrl)
@@ -46,6 +47,7 @@ function getBrazilStats() {
             const responseJson = data.data;
 
             if (Object.keys(responseJson).length > 0) {
+                console.log(responseJson);
                 document.getElementById('totalBrasilConfirmed').innerHTML = responseJson.confirmed.toLocaleString('pt-BR');
             } else {
                 document.getElementById('totalBrasilConfirmed').innerHTML = 0;
@@ -66,7 +68,6 @@ function getStatsPerState(sigla) {
             console.error(error);
         })
         .then(data => {
-            const responseJson = data.data;
             console.log(data);
         });
 }
