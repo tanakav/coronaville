@@ -6,6 +6,20 @@
     box-sizing: border-box;
 }
 
+#siteLogo{
+    
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 3em;
+    padding: 5px;
+    color: white;
+
+}
+
+#logoColor{
+    color: #003459;
+}
+
 .headerText {
     font-family: 'Montserrat', sans-serif;
     margin: 2vw 0 0 2vw;
@@ -14,22 +28,28 @@
 
 .stateText {
     font-family: 'Montserrat', sans-serif;
-    margin: 2vw 0 0 2vw;
+    margin: 2vw 0 2vw 2vw;
     padding: 0;
     color: white;
-    font-size: 2vw;
-    margin: 0 0 0 2vw;
+    font-size: 2.5em;
     padding: 0;
 }
 
 .stateHeader {
     font-family: 'Montserrat', sans-serif;
-    margin: 2vw 0 0 2vw;
+    margin: 2vw 0 2vw 2vw;
     padding: 0;
     color: #003459;
-    font-size: 2vw;
+    font-size: 3em;
     margin: 0 0 0 2vw;
-    padding: 0;
+}
+
+.stateTitle {
+    font-family: 'Montserrat', sans-serif;
+    padding: 8vw 0 4vw 0;
+    color: #003459;
+    font-size: 2.5em;
+    margin: 0 0 0 2vw;
 }
 
 #wrap {
@@ -82,9 +102,21 @@ li {
 }
 
 .iconNumber {
-    width: 3.5vw;
-    height: 3.5vw;
+    width: 0.7em;
+    height: 0.7em;
 }
+
+/*Styling Tabela*/
+
+#tabela{
+    border-collapse: collapse;
+    }
+                        
+    #tabela td, #tabela th {
+        border: 1px solid #ddd;
+        padding: 2vw;
+        
+    }
 
 /* Footer */
 footer {
@@ -96,7 +128,7 @@ footer {
 #footerText {
     font-family: 'Montserrat', sans-serif;
     color: white;
-    font-size: 1vw;
+    font-size: 1.5vw;
     margin: 2vw;
 }
 
