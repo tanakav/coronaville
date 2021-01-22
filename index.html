@@ -6,22 +6,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <meta name="description" content="CovidRadar informa dados em tempo real dos casos brasileiros de COVID-19">
-    <title>CovidRadar</title>
+    <title>RadarCovid</title>
 </head>
 
 <!-- O id 'wrap' é para largura do site em 720px -->
 
 <body id="wrap">
-
-    <nav id="main-nav">
-        <!-- Começo do menu quebrado -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Sobre</a></li>
-        </ul>
-        <!-- Fim do menu quebrado -->
-
-    </nav>
+    <header id="header">
+        <a href="index.html" id="siteLogo">Radar<span id="logoColor">Covid</span></a>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    
 
     <section>
         <div>
@@ -47,46 +47,127 @@
             <p class="headerText totalText">novos jacarés no Brasil</p>
         </div>
 
-        <div>
-            <br />
-            <br />
-            <br />
-            <p class="stateHeader">Casos por região</p>
-            <p class="stateText" data-sigla="ac">Acre:</p>
-            <p class="stateText" data-sigla="al">Alagoas:</p>
-            <p class="stateText" data-sigla="ap">Amapá:</p>
-            <p class="stateText" data-sigla="am">Amazonas:</p>
-            <p class="stateText" data-sigla="ba">Bahia:</p>
-            <p class="stateText" data-sigla="ce">Ceará:</p>
-            <p class="stateText" data-sigla="df">Distrito Federal:</p>
-            <p class="stateText" data-sigla="es">Espírito Santo:</p>
-            <p class="stateText" data-sigla="go">Goiás:</p>
-            <p class="stateText" data-sigla="ma">Maranhão:</p>
-            <p class="stateText" data-sigla="mt">Mato Grosso:</p>
-            <p class="stateText" data-sigla="ms">Mato Grosso do Sul:</p>
-            <p class="stateText" data-sigla="mg">Minas Gerais:</p>
-            <p class="stateText" data-sigla="pa">Pará:</p>
-            <p class="stateText" data-sigla="pb">Paraíba:</p>
-            <p class="stateText" data-sigla="pr">Paraná:</p>
-            <p class="stateText" data-sigla="pe">Pernambuco:</p>
-            <p class="stateText" data-sigla="pi">Piauí:</p>
-            <p class="stateText" data-sigla="rj">Rio de Janeiro:</p>
-            <p class="stateText" data-sigla="rn">Rio Grande do Norte:</p>
-            <p class="stateText" data-sigla="rs">Rio Grande do Sul:</p>
-            <p class="stateText" data-sigla="ro">Rondônia:</p>
-            <p class="stateText" data-sigla="ro">Roraima:</p>
-            <p class="stateText" data-sigla="rr">Santa Catarina:</p>
-            <p class="stateText" data-sigla="sp">São Paulo:</p>
-            <p class="stateText" data-sigla="se">Sergipe:</p>
-            <p class="stateText" data-sigla="to">Tocantins:</p>
-
+        <div class="stateTitle">
+             <p>Casos por região</p>
         </div>
+
+        <table id="tabela">
+            <tr>
+                <th class="stateHeader">Estado</th>
+                <th class="stateHeader">Casos confirmados</th>
+            </tr>
+            <tr>
+                <td class="stateText">Acre</td>
+                <td class="stateText" data-sigla="ac"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Alagoas</td>
+                <td class="stateText" data-sigla="al"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Amapá</td>
+                <td class="stateText" data-sigla="ap"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Amazonas</td>
+                <td class="stateText" data-sigla="am"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Bahia</td>
+                <td class="stateText" data-sigla="ba"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Ceará</td>
+                <td class="stateText" data-sigla="ce"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Distrito Federal</td>
+                <td class="stateText" data-sigla="df"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Espírito Santo</td>
+                <td class="stateText" data-sigla="es"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Goiás</td>
+                <td class="stateText" data-sigla="go"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Maranhão</td>
+                <td class="stateText" data-sigla="ma"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Mato Grosso</td>
+                <td class="stateText" data-sigla="mt"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Mato Grosso do Sul</td>
+                <td class="stateText" data-sigla="ms"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Minas Gerais</td>
+                <td class="stateText" data-sigla="mg"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Pará</td>
+                <td class="stateText" data-sigla="pa"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Paraíba</td>
+                <td class="stateText" data-sigla="pb"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Pernambuco</td>
+                <td class="stateText" data-sigla="pe"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Piauí</td>
+                <td class="stateText" data-sigla="pi"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Rio de Janeiro</td>
+                <td class="stateText" data-sigla="rj"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Rio Grande do Norte</td>
+                <td class="stateText" data-sigla="rn"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Rio Grande do Sul</td>
+                <td class="stateText" data-sigla="rs"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Rondônia</td>
+                <td class="stateText" data-sigla="ro"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Roraima</td>
+                <td class="stateText" data-sigla="rr"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Santa Catarina</td>
+                <td class="stateText" data-sigla="sc"></td>
+            </tr>
+            <tr>
+                <td class="stateText">São Paulo</td>
+                <td class="stateText" data-sigla="sp"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Sergipe</td>
+                <td class="stateText" data-sigla="se"></td>
+            </tr>
+            <tr>
+                <td class="stateText">Tocantins</td>
+                <td class="stateText" data-sigla="to"></td>
+            </tr>
+
+        </table>
 
         </div>
     </section>
 
     <footer>
-        <p id="footerText">Made with &#128151 around the &#127758 by PPN &copy; 2021, All Rights Reserved.</p>
+        <p id="footerText">Made with &#128151 from &#127969 by PPN &copy; 2021<br /> All Rights Reserved.</p>
         <script src="scripts/main.js"></script>
     </footer>
 
