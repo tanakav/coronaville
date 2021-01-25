@@ -66,7 +66,6 @@ let getStateData = async (state) => {
     const getStateDataPromise = (state) => new Promise((resolve, reject) => {
         fetch(route)
             .then(response => {
-                console.log(response)
                 if (response.status == 200) {
                     resolve(response.json());
                 }
@@ -86,11 +85,11 @@ statesParagraph.forEach((element) => {
     getStateData(element.dataset.sigla)
         .then(data => {
             var stateData;
-            stateData = estadosBrasil.find(state => state.sigla === data.uf).nome;
-            stateData += ': ' + data.cases.toLocaleString('pt-BR');
+            // stateData = estadosBrasil.find(state => state.sigla === data.uf).nome;
+            // stateData += ': ' + data.cases.toLocaleString('pt-BR');
+            stateData = data.cases.toLocaleString('pt-BR');
             element.innerHTML = stateData;
         }).catch(err => {
             console.error(err);
         })
 });
-
